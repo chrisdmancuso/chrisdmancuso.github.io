@@ -142,6 +142,7 @@ charDict = {
     'z': 0,
     }
 
+#Example word search
 refinedWords = searchForWord(wordBank, ['d', 'i', 'e', 'u', 'o', 'n'], ['b', '', '' ,'', ''], ['', 'a', 'c', '', ''])
 print(refinedWords)
 
