@@ -144,12 +144,4 @@ charDict = {
 
 refinedWords = searchForWord(wordBank, ['d', 'i', 'e', 'u', 'o', 'n'], ['b', '', '' ,'', ''], ['', 'a', 'c', '', ''])
 print(refinedWords)
-#charResults(wordBank)
-#printResult(char)
-#print(searchSpecificLetter(wordBank, 'y', 4))
-#modeAll(wordBank, char)
-#print(wordBank.index('movie'))
-#print(wordBank.index('cater'))
-#print(wordBank.index('saute'))
-#print(wordBank[281])
-#print(position(wordBank, 's'))
+
