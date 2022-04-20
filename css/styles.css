@@ -93,7 +93,7 @@ input {
 }
 
 /*Incorrect Selection CheckBoxes*/
-.checkbox-group {
+#checkbox-group {
   position: relative;
   height: 350px;
 }
@@ -168,3 +168,169 @@ input[type="checkbox"]:checked + label {
   color: white;
 }
 
+/*Media Queries*/
+/*iPad Mini/Tablets*/
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  #checkbox-group {
+    position: relative;
+    text-align: center;
+    height: 250px;
+  }
+  #checkbox-group-id {
+    position: absolute;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    width: 45%;
+    top: 5%;
+  }
+  #selection li {
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 2px;
+    float: left;
+    width: 40px;
+    background-color: transparent;
+    text-align: center;
+  }
+  .textbox {
+    width: 50px;
+    height: 80px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+}
+/*Medium/Large size Phones*/
+@media screen and (min-width: 376px) and (max-width: 767px) {
+  #checkbox-group {
+    position: relative;
+    text-align: center;
+    height: 275px;
+  }
+  #checkbox-group-id {
+    position: absolute;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    width: 372px;
+    top: 5%;
+  }
+  #selection li {
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 3px;
+    float: left;
+    width: 40px;
+    background-color: transparent;
+    text-align: center;
+  }
+  .textbox {
+    width: 50px;
+    height: 80px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+}
+/*iPhone SE 375 x 667/Modern iPhone */
+@media screen and (max-width: 375px) {
+  #checkbox-group {
+    position: relative;
+    text-align: center;
+    height: 305px;
+  }
+  #checkbox-group-id {
+    position: absolute;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    top: 5%;
+  }
+  #selection li {
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 4px;
+    float: left;
+    width: 40px;
+    background-color: transparent;
+    text-align: center;
+  }
+  .textbox {
+    width: 50px;
+    height: 80px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+  /*Galaxy S8+ 360 x 740*/
+  @media screen and (min-width: 281px) and (max-width: 374px) {
+    #checkbox-group {
+      position: relative;
+      text-align: center;
+      height: 260px;
+    }
+    #checkbox-group-id {
+      position: absolute;
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      width: 90%;
+      top: 5%;
+    }
+    #selection li {
+      list-style-type: none;
+      list-style-position: outside;
+      padding: 3px;
+      float: left;
+      width: 40px;
+      background-color: transparent;
+      text-align: center;
+    }
+    .textbox {
+      width: 45px;
+      height: 80px;
+      padding: 1px;
+      margin: 1px;
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+  }
+  /*Galaxy Fold 280 x 653/XS Phones*/
+  @media screen and (max-width: 280px) {
+    #checkbox-group {
+      position: relative;
+      text-align: center;
+      height: 260px;
+    }
+    #checkbox-group-id {
+      position: absolute;
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      width: 90%;
+      top: 5%;
+    }
+    #selection li {
+      list-style-type: none;
+      list-style-position: outside;
+      padding: 5px;
+      float: left;
+      width: 24px;
+      background-color: transparent;
+      text-align: center;
+    }
+    .textbox {
+      width: 45px;
+      height: 80px;
+      padding: 1px;
+      margin: 1px;
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+  }
+}
