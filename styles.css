@@ -1,0 +1,336 @@
+/*Default Values*/
+
+body {
+  background-color: #1a1a1c;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  text-shadow: 0px 0px 1px #fff;
+}
+/*Topnav*/
+.topnav {
+  background-color: #3a3a3c;
+  overflow: hidden;
+  height: 40px;
+}
+#topnav-header {
+  color: white;
+  font-size: 24px;
+  width: 100%;
+  height: 0px;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+#info {
+  float: right;
+  color: white;
+  padding-right: 5px;
+  cursor: pointer;
+}
+.divider {
+  background-color: white;
+  height: 0.5px;
+  padding: 0.5px;
+}
+.white-space {
+  height: 30px;
+}
+/*Correct and misplaced form boxes*/
+.form-group {
+  display: flex;
+  padding-bottom: 25px;
+  width: 100%;
+}
+
+.textbox {
+  width: 50px;
+  height: 80px;
+  padding: 1px;
+  margin: 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.correct {
+  background-color: #538d4e;
+}
+
+.misplaced {
+  background-color: #b59f3b;
+}
+
+/*Incorrect Selection CheckBoxes*/
+#checkbox-group {
+  position: relative;
+  height: 350px;
+}
+#checkbox-group-id {
+  position: absolute;
+  width: 30%;
+  top: 5%;
+}
+#selection li {
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 4px;
+  float: left;
+  width: 60px;
+  background-color: transparent;
+  text-align: center;
+}
+
+label {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+  position: absolute;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid black;
+  color: white;
+  background-color: #818384;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"]:checked + label {
+  border: 2px solid black;
+  color: white;
+  background-color: #3a3a3c;
+}
+
+.incorrect {
+  display: none;
+}
+
+.row {
+  position: relative;
+}
+#search-results-id {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  top: 5%;
+  text-align: center;
+}
+#search-results {
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 4px;
+  width: 75%;
+  background-color: transparent;
+}
+#words {
+  text-align: center;
+  display: inline;
+  width: 50px;
+  color: white;
+}
+
+/*Media Queries*/
+/*iPad Mini/Tablets*/
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  #checkbox-group {
+    position: relative;
+    text-align: center;
+    height: 250px;
+  }
+  #checkbox-group-id {
+    position: absolute;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    width: 45%;
+    top: 5%;
+  }
+  #selection li {
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 2px;
+    float: left;
+    width: 40px;
+    background-color: transparent;
+    text-align: center;
+  }
+  .textbox {
+    width: 50px;
+    height: 80px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+}
+/*Medium/Large size Phones*/
+@media screen and (min-width: 376px) and (max-width: 767px) {
+  #checkbox-group {
+    position: relative;
+    text-align: center;
+    height: 275px;
+  }
+  #checkbox-group-id {
+    position: absolute;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    width: 372px;
+    top: 5%;
+  }
+  #selection li {
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 3px;
+    float: left;
+    width: 40px;
+    background-color: transparent;
+    text-align: center;
+  }
+  .textbox {
+    width: 50px;
+    height: 80px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+}
+/*iPhone SE 375 x 667/Modern iPhone */
+@media screen and (max-width: 375px) {
+  #checkbox-group {
+    position: relative;
+    text-align: center;
+    height: 305px;
+  }
+  #checkbox-group-id {
+    position: absolute;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    top: 5%;
+  }
+  #selection li {
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 4px;
+    float: left;
+    width: 40px;
+    background-color: transparent;
+    text-align: center;
+  }
+  .textbox {
+    width: 50px;
+    height: 80px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+  /*Galaxy S8+ 360 x 740*/
+  @media screen and (min-width: 281px) and (max-width: 374px) {
+    #checkbox-group {
+      position: relative;
+      text-align: center;
+      height: 260px;
+    }
+    #checkbox-group-id {
+      position: absolute;
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      width: 90%;
+      top: 5%;
+    }
+    #selection li {
+      list-style-type: none;
+      list-style-position: outside;
+      padding: 3px;
+      float: left;
+      width: 40px;
+      background-color: transparent;
+      text-align: center;
+    }
+    .textbox {
+      width: 45px;
+      height: 80px;
+      padding: 1px;
+      margin: 1px;
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+  }
+  /*Galaxy Fold 280 x 653/XS Phones*/
+  @media screen and (max-width: 280px) {
+    #checkbox-group {
+      position: relative;
+      text-align: center;
+      height: 260px;
+    }
+    #checkbox-group-id {
+      position: absolute;
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      width: 90%;
+      top: 5%;
+    }
+    #selection li {
+      list-style-type: none;
+      list-style-position: outside;
+      padding: 5px;
+      float: left;
+      width: 24px;
+      background-color: transparent;
+      text-align: center;
+    }
+    .textbox {
+      width: 45px;
+      height: 80px;
+      padding: 1px;
+      margin: 1px;
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+  }
+}
