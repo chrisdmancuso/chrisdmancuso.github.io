@@ -13,7 +13,24 @@
   <body ng-controller="WordleSolverController">
       <section class="topnav">
           <h1 id="topnav-header">Wordle Solver</h1>
-        <i id="info" class="bi bi-info-circle" ng-click="tutorial"></i>
+        <i id="info" class="bi bi-info-circle" ng-click="showInfo()"></i>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close" ng-click="closeInfo()">&times;</span>
+            </div>
+            <div class="modal-header-info">
+              <h2>HOW TO USE</h2>
+            </div>
+            <div class="modal-body">
+              <p class="info-p">Place your correct letters in the top field in the proper position</p>
+              <p class="info-p">Misplaced letters go in the bottom field in the proper position</p>
+              <p class="info-p">Use the virtual keyboard to remove letters from the search</p>
+
+              <img src="images/Info.png" id="info-png">
+            </div>
+          </div>
+        </div>
       </section>
       <section class="divider"></section>
       <section class="white-space"></section>
