@@ -42,6 +42,9 @@
     $scope.chkBox24 = "";
     $scope.chkBox25 = "";
     $scope.chkBox26 = "";
+    var modal = document.getElementById("myModal");
+    var info = document.getElementById("info");
+    var span = document.getElementsByClassName("close")[0];
 
     $scope.searchOnInput = function(keyEvent) {
     var chkBoxes = setCheckBoxes([$scope.chkBox1, $scope.chkBox2, $scope.chkBox3, $scope.chkBox4, $scope.chkBox5, $scope.chkBox6,
@@ -60,7 +63,21 @@
     $scope.message = searchForWord(wordBank, [chkBoxes][0], [$scope.posA, $scope.posB, $scope.posC, $scope.posD, $scope.posE], [$scope.posF, $scope.posG, $scope.posH, $scope.posI, $scope.posJ] );
 
     };
-  }
+    $scope.showInfo = function() {
+      modal.style.display = "block";
+    }
+
+    $scope.closeInfo = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+  };
 })();
 function setCheckBoxes(checkBoxes) {
   const chkBoxValues = [];
