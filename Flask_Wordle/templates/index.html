@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My Wordle!</title>
+  </head>
+  <body>
+    <h1>TITLE AND EXPLANATION</h1>
+    <p>Explanation about how the page works</p>
+    <!--Probably want to change from form to something else. Also want to create some space between the two and label them-->
+    <form method="POST" autocomplete="off">
+      <div>
+        <input
+          class="textbox"
+          type="text"
+          maxlength="1"
+          name="a"
+          value="{{ request.form['a'] }}"
+        />
+        <input
+          class="textbox"
+          type="text"
+          maxlength="1"
+          name="b"
+          value="{{ request.form['b'] }}"
+        />
+        <input
+          class="textbox"
+          type="text"
+          maxlength="1"
+          name="c"
+          value="{{ request.form['c'] }}"
+        />
+        <input
+          class="textbox"
+          type="text"
+          maxlength="1"
+          name="d"
+          value="{{ request.form['d'] }}"
+        />
+        <input
+          class="textbox"
+          type="text"
+          maxlength="1"
+          name="e"
+          value="{{ request.form['e'] }}"
+        />
+      </div>
+      <br></br>
+      <div>
+        <input
+          class="textbox"
+          type="text"
+          maxlength="1"
+          name="f"
+          value="{{ request.form['f'] }}"
+        />
+        <input
+          class="textbox"
+          type="text"
+          maxlength="1"
+          name="g"
+          value="{{ request.form['g'] }}"
+        />
+        <input
+          class="textbox"
+          type="text"
+          maxlength="1"
+          name="h"
+          value="{{ request.form['h'] }}"
+        />
+        <input
+          class="textbox"
+          type="text"
+          maxlength="1"
+          name="i"
+          value="{{ request.form['i'] }}"
+        />
+        <input
+          class="textbox"
+          type="text"
+          maxlength="1"
+          name="j"
+          value="{{ request.form['j'] }}"
+        />
+      </div>
+      <ul id="selection">
+        <li>
+            <input class="incorrect" type="checkbox" id="incA" name="incA" {% if box1 %} checked {% endif %}/>
+            <label for="incA">A</label>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incB" name="incB" {% if box2 %} checked {% endif %}/>
+            <label for="incB">B</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incC" name="incC" {% if box3 %} checked {% endif %}/>
+            <label for="incC">C</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incD" name="incD" {% if box4 %} checked {% endif %}/>
+            <label for="incD">D</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incE" name="incE" {% if box5 %} checked {% endif %}/>
+            <label for="incE">E</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incF" name="incF" {% if box6 %} checked {% endif %}/>
+            <label for="incF">F</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incG" name="incG" {% if box7 %} checked {% endif %}/>
+            <label for="incG">G</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incH" name="incH" {% if box8 %} checked {% endif %}/>
+            <label for="incH">H</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incI" name="incI" {% if box9 %} checked {% endif %}/>
+            <label for="incI">I</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incJ" name="incJ" {% if box10 %} checked {% endif %}/>
+            <label for="incJ">J</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incK" name="incK" {% if box11 %} checked {% endif %}/>
+            <label for="incK">K</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incL" name="incL" {% if box12 %} checked {% endif %}/>
+            <label for="incL">L</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incM" name="incM" {% if box13 %} checked {% endif %}/>
+            <label for="incM">M</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incN" name="incN" {% if box14 %} checked {% endif %}/>
+            <label for="incN">N</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incO" name="incO" {% if box15 %} checked {% endif %}/>
+            <label for="incO">O</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incP" name="incP" {% if box16 %} checked {% endif %}/>
+            <label for="incP">P</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incQ" name="incQ" {% if box17 %} checked {% endif %}/>
+            <label for="incQ">Q</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incR" name="incR" {% if box18 %} checked {% endif %}/>
+            <label for="incR">R</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incS" name="incS" {% if box19 %} checked {% endif %}/>
+            <label for="incS">S</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incT" name="incT" {% if box20 %} checked {% endif %}/>
+            <label for="incT">T</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incU" name="incU" {% if box21 %} checked {% endif %}/>
+            <label for="incU">U</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incV" name="incV" {% if box22 %} checked {% endif %}/>
+            <label for="incV">V</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incW" name="incW" {% if box23 %} checked {% endif %}/>
+            <label for="incW">W</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incX" name="incX" {% if box24 %} checked {% endif %}/>
+            <label for="incX">X</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incY" name="incY" {% if box25 %} checked {% endif %}/>
+            <label for="incY">Y</label>
+          </span>
+        </li>
+        <li>
+          <span>
+            <input class="incorrect" type="checkbox" id="incZ" name="incZ" {% if box26 %} checked {% endif %}/>
+            <label for="incZ">Z</label>
+          </span>
+        </li>
+        </ul>   
+      <input id="submit_button" type="submit" value="Try it!" />
+    </form>
+    <!--Incorrect letter buttons here-->
+    <ul id="words">
+      {% for i in Words %}
+      <li id="wordItems"><a id="words">{{ i }}</a></li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
